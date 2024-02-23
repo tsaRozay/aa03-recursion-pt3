@@ -13,7 +13,7 @@ flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
 function flatten(arr) {
-  // Your code here 
+ 
 }
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
