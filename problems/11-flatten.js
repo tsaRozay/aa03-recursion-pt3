@@ -13,8 +13,34 @@ flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
 function flatten(arr) {
- 
+  let flattened = [];
+
+  arr.forEach(element => {
+    if (Array.isArray(element)) {
+      flattened = flattened.concat(flatten(element));
+    } else {
+      flattened.push(element);
+    }
+  });
+
+  return flattened;
 }
+/*
+  Alex's solution:
+  function flatten(arr){
+    let result = [];
+
+    for(let i = 0; i < arr.length;i++){
+      let item = arr[i];
+
+      if(Array.isArray(item)){
+        result.push(...flatten(item))
+      } else{
+        result.push(item)
+      }
+    }
+      return result;
+  }
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = flatten;
